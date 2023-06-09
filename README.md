@@ -13,7 +13,7 @@
 
 
 ## 3.三方库依赖
-Ipopt 
+Ipopt  
 Osqp-0.4.1  
 Eigen3  
 OsqpEigen  
