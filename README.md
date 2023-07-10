@@ -20,8 +20,6 @@ https://zhuanlan.zhihu.com/p/342740447
 
 ![OpenSpacePlannerArchitecture](./pictures/OpenSpacePlannerArchitecture.png)
 
-<center>Open Space Planner 架构</center>
-
 首先是通过 ROI 确定可行驶区域，然后通过Hybrid A*算法搜索出一条粗糙的路径，然后通过DL-IAPS算法对粗糙的路径进行平滑获得一条满足**曲率约束**，**曲率平滑**的**无碰撞**路径。接下来对平滑后的路径通过PJSO算法速度规划，最后生成一条轨迹。
 
 ## 3. DL-IAPS & PJSO  
