@@ -16,7 +16,7 @@ https://zhuanlan.zhihu.com/p/342740447
 
 ## 2. Open Space Planner
 
-整个Open Space Planner模块如下图所示，由 **ROI**、**Trajectory Generation** 以及 **Trajectory Post-processing **三部分组成：
+整个Open Space Planner模块如下图所示，由 **ROI**、**Trajectory Generation** 以及 **Trajectory Post-processing**三部分组成：
 
 ![OpenSpacePlannerArchitecture](./pictures/OpenSpacePlannerArchitecture.png)
 
