@@ -45,7 +45,7 @@ https://zhuanlan.zhihu.com/p/342740447
 
 #### 3.1.2 碰撞检测原理
 
-**轴对齐包围矩形**（Axis Aligned Bounding Box，AABB），即对于矩形A 和 矩形B，采用**（x_min, x_max, y_min, y_max）**的方式来描述该矩形，只要在 X 轴 或 Y 轴上没有重合，则这两个矩形不相交。
+**轴对齐包围矩形**（Axis Aligned Bounding Box，AABB），即对于矩形A 和 矩形B，采用**x_min, x_max, y_min, y_max**的方式来描述该矩形，只要在 X 轴 或 Y 轴上没有重合，则这两个矩形不相交。
 
 ![AABB](./pictures/AABB.jpg)![HasOverlap](./pictures/HasOverlap.jpg)
 
@@ -57,7 +57,7 @@ https://zhuanlan.zhihu.com/p/342740447
 
 ![InitalPathCollisionCheck](./pictures/InitalPathCollisionCheck.png)
 
-ReAnchoring过程如下代码所示，**通过随机生成满足一定正态分布的偏移量来调整碰撞点的位置**。如果碰撞点是路径上的第二个点或倒数第二个点时，随机偏移量满足的正态分布为$N(0, 0.25^2)$，其取值范围为（-0.8～0.8）；否则，随机偏移量满足的正态分布为$N(0, 1)$，其取值范围为（-0.5～0.5）。
+ReAnchoring过程如下代码所示，**通过随机生成满足一定正态分布的偏移量来调整碰撞点的位置**。如果碰撞点是路径上的第二个点或倒数第二个点时，随机偏移量满足的正态分布为 $N(0, 0.25^2)$ ，其取值范围为 $(-0.8～0.8)$ ；否则，随机偏移量满足的正态分布为 $N(0, 1)$，其取值范围为 $(-0.5～0.5)$ 。
 
 ![NormalDistribution](./pictures/NormalDistribution.png)
 
@@ -91,7 +91,7 @@ SQP优化过程中会迭代求解最优，且SQP迭代也有内外嵌套的两�
 
 ##### 3.1.4.2 **Out Loop for Collision Avoidance**
 
-优化生成的平滑 path 会对所有的障碍物进行碰撞检测，如果通过碰撞检测，则输出 path ，**如果没能通过碰撞检测，则将碰撞点记录下来，收缩对应 path 点的 bubble region (也就是约束条件中的$B_k$)**，使得下轮优化过程中 path 点的无碰撞区域更小。下面这个图形象解释了这个过程：上一次迭代中，bubble region是蓝色圈圈，发现没通过碰撞检测，这一次将会收缩蓝色圈圈，变成红色圈圈，然后进到下一次迭代。
+优化生成的平滑 path 会对所有的障碍物进行碰撞检测，如果通过碰撞检测，则输出 path ，**如果没能通过碰撞检测，则将碰撞点记录下来，收缩对应 path 点的 bubble region (也就是约束条件中的 $B_k$ )**，使得下轮优化过程中 path 点的无碰撞区域更小。下面这个图形象解释了这个过程：上一次迭代中，bubble region是蓝色圈圈，发现没通过碰撞检测，这一次将会收缩蓝色圈圈，变成红色圈圈，然后进到下一次迭代。
 
 ![BubbleUpdate](./pictures/BubbleUpdate.png)
 
