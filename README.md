@@ -25,7 +25,7 @@ https://zhuanlan.zhihu.com/p/342740447
 ## 3. DL-IAPS & PJSO  
 
 百度Apollo设计了一种横纵向解耦的OpenSpace规划算法（DL-IAPS & PJSO）。  
-**路径规划**：双循环锚定迭代算法（Dual-Loop Iterative Anchoring Path Smoothing，DL-IAPS）。主要包含了两层循环，**外层循环处理避免碰撞，内层循环处理路径平滑**。
+**路径规划**：双循环迭代锚定算法（Dual-Loop Iterative Anchoring Path Smoothing，DL-IAPS）。主要包含了两层循环，**外层循环处理避免碰撞，内层循环处理路径平滑**。
 
 ![Algorithm_1png](./pictures/Algorithm_1png.png)
 
